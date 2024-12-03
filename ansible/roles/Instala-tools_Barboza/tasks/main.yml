@@ -1,0 +1,13 @@
+---
+# tasks file for Instala-tools_Barboza
+
+- name: Instalar los programas
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - tree
+    - htop
+    - tmux
+    - speedtest-cli
+

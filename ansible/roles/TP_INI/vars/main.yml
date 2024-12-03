@@ -1,4 +1,9 @@
 ---
 # vars file for TP_INI
 
-#Nombre_Grupo: "Nombre-Grupo-Ejemplo"
+
+#LAS VARIABLES 
+nombre_grupo: "Grupo_Barboza"  
+division: "318-2"
+mi_nombre: "Dylan"       
+mi_apellido: "Barboza"

@@ -1,0 +1,256 @@
+2024-12-02 23:54:11,732 p=5526 u=vagrant n=ansible | [WARNING]:  * Failed to parse /home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory/hosts with yaml plugin:
+We were unable to read either as JSON nor YAML, these are the errors we got from each: JSON: Expecting value: line 1
+column 2 (char 1)  Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be
+in '/home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory/hosts': line 2, column 1, but may be elsewhere in
+the file depending on the exact syntax problem.  The offending line appears to be:  [all:children] testing ^ here
+
+2024-12-02 23:54:11,732 p=5526 u=vagrant n=ansible | [WARNING]:  * Failed to parse /home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory/hosts with ini plugin:
+/home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory/hosts:4: Expected group name, got: 192.168.1.10
+ansible_ssh_user=vagrant ansible_ssh_private_key_file=/path/to/vagrant_private_key
+
+2024-12-02 23:54:11,732 p=5526 u=vagrant n=ansible | [WARNING]: Unable to parse /home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory/hosts as an inventory
+source
+
+2024-12-02 23:54:11,732 p=5526 u=vagrant n=ansible | [WARNING]: Unable to parse /home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory as an inventory source
+
+2024-12-02 23:54:11,733 p=5526 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-12-02 23:54:11,738 p=5526 u=vagrant n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match
+'all'
+
+2024-12-02 23:54:12,126 p=5526 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: testing
+
+2024-12-02 23:54:12,127 p=5526 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: produccion
+
+2024-12-02 23:54:12,127 p=5526 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-02 23:54:12,127 p=5526 u=vagrant n=ansible | skipping: no hosts matched
+2024-12-02 23:54:12,127 p=5526 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-02 23:54:44,431 p=5536 u=vagrant n=ansible | [WARNING]:  * Failed to parse /home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory/hosts with yaml plugin:
+We were unable to read either as JSON nor YAML, these are the errors we got from each: JSON: Expecting value: line 1
+column 2 (char 1)  Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be
+in '/home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory/hosts': line 2, column 1, but may be elsewhere in
+the file depending on the exact syntax problem.  The offending line appears to be:  [all:children] testing ^ here
+
+2024-12-02 23:54:44,431 p=5536 u=vagrant n=ansible | [WARNING]:  * Failed to parse /home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory/hosts with ini plugin:
+/home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory/hosts:2: Section [all:children] includes undefined
+group: testing
+
+2024-12-02 23:54:44,432 p=5536 u=vagrant n=ansible | [WARNING]: Unable to parse /home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory/hosts as an inventory
+source
+
+2024-12-02 23:54:44,432 p=5536 u=vagrant n=ansible | [WARNING]: Unable to parse /home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/inventory as an inventory source
+
+2024-12-02 23:54:44,432 p=5536 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-12-02 23:54:44,530 p=5536 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: testing
+
+2024-12-02 23:54:44,531 p=5536 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-02 23:54:44,583 p=5536 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-02 23:54:45,962 p=5536 u=vagrant n=ansible | ok: [localhost]
+2024-12-02 23:54:45,973 p=5536 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-02 23:54:45,997 p=5536 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo si no existe] *************************************************************
+2024-12-02 23:54:46,253 p=5536 u=vagrant n=ansible | changed: [localhost]
+2024-12-02 23:54:46,267 p=5536 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-02 23:54:46,773 p=5536 u=vagrant n=ansible | changed: [localhost]
+2024-12-02 23:54:46,779 p=5536 u=vagrant n=ansible | TASK [Otra tarea] ****************************************************************************************************
+2024-12-02 23:54:46,793 p=5536 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Después de la ejecución del rol TP_INI"
+}
+2024-12-02 23:54:46,805 p=5536 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-02 23:54:46,805 p=5536 u=vagrant n=ansible | localhost                  : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-02 23:55:03,377 p=5720 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: testing
+
+2024-12-02 23:55:03,377 p=5720 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: produccion
+
+2024-12-02 23:55:03,377 p=5720 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-02 23:55:03,378 p=5720 u=vagrant n=ansible | skipping: no hosts matched
+2024-12-02 23:55:03,378 p=5720 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-02 23:55:06,824 p=5722 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: testing
+
+2024-12-02 23:55:06,825 p=5722 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: produccion
+
+2024-12-02 23:55:06,825 p=5722 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-02 23:55:06,825 p=5722 u=vagrant n=ansible | skipping: no hosts matched
+2024-12-02 23:55:06,825 p=5722 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-02 23:55:45,144 p=5727 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: testing
+
+2024-12-02 23:55:45,145 p=5727 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: produccion
+
+2024-12-02 23:55:45,145 p=5727 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-02 23:55:45,145 p=5727 u=vagrant n=ansible | skipping: no hosts matched
+2024-12-02 23:55:45,145 p=5727 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-02 23:55:57,631 p=5732 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: testing
+
+2024-12-02 23:55:57,632 p=5732 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-02 23:55:57,638 p=5732 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-02 23:55:58,581 p=5732 u=vagrant n=ansible | ok: [localhost]
+2024-12-02 23:55:58,593 p=5732 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-02 23:55:58,617 p=5732 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo si no existe] *************************************************************
+2024-12-02 23:55:58,850 p=5732 u=vagrant n=ansible | ok: [localhost]
+2024-12-02 23:55:58,856 p=5732 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-02 23:55:59,368 p=5732 u=vagrant n=ansible | ok: [localhost]
+2024-12-02 23:55:59,374 p=5732 u=vagrant n=ansible | TASK [Otra tarea] ****************************************************************************************************
+2024-12-02 23:55:59,385 p=5732 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Después de la ejecución del rol TP_INI"
+}
+2024-12-02 23:55:59,412 p=5732 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-02 23:55:59,412 p=5732 u=vagrant n=ansible | localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-02 23:56:19,437 p=5910 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-02 23:56:19,444 p=5910 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-02 23:56:20,345 p=5910 u=vagrant n=ansible | ok: [localhost]
+2024-12-02 23:56:20,357 p=5910 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-02 23:56:20,381 p=5910 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo si no existe] *************************************************************
+2024-12-02 23:56:20,622 p=5910 u=vagrant n=ansible | ok: [localhost]
+2024-12-02 23:56:20,628 p=5910 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-02 23:56:21,085 p=5910 u=vagrant n=ansible | ok: [localhost]
+2024-12-02 23:56:21,091 p=5910 u=vagrant n=ansible | TASK [Otra tarea] ****************************************************************************************************
+2024-12-02 23:56:21,104 p=5910 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Después de la ejecución del rol TP_INI"
+}
+2024-12-02 23:56:21,116 p=5910 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-02 23:56:21,116 p=5910 u=vagrant n=ansible | localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-03 00:23:59,320 p=6218 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-03 00:23:59,326 p=6218 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-03 00:24:00,250 p=6218 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 00:24:00,261 p=6218 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-03 00:24:00,284 p=6218 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-03 00:24:00,727 p=6218 u=vagrant n=ansible | changed: [localhost]
+2024-12-03 00:24:00,733 p=6218 u=vagrant n=ansible | TASK [Otra tarea] ****************************************************************************************************
+2024-12-03 00:24:00,742 p=6218 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Después de la ejecución del rol TP_INI"
+}
+2024-12-03 00:24:00,754 p=6218 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-03 00:24:00,754 p=6218 u=vagrant n=ansible | localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-03 00:39:11,273 p=6440 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-03 00:39:11,294 p=6440 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-03 00:39:12,207 p=6440 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 00:39:12,218 p=6440 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-03 00:39:12,242 p=6440 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-03 00:39:12,702 p=6440 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 00:39:12,708 p=6440 u=vagrant n=ansible | TASK [Alta usuarios] *************************************************************************************************
+2024-12-03 00:39:12,724 p=6440 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  but found another document
+
+The error appears to be in '/home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/roles/Alta_Usuarios_Barboza/tasks/main.yml': line 29, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+#   - { nombre: "usuario6", grupos: "G_R6,{{ nombre_grupo  }}" }
+---
+^ here
+
+2024-12-03 00:39:12,725 p=6440 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-03 00:39:12,725 p=6440 u=vagrant n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-03 00:39:48,730 p=6652 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-03 00:39:48,751 p=6652 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-03 00:39:49,634 p=6652 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 00:39:49,646 p=6652 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-03 00:39:49,669 p=6652 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-03 00:39:50,129 p=6652 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 00:39:50,135 p=6652 u=vagrant n=ansible | TASK [Alta usuarios] *************************************************************************************************
+2024-12-03 00:39:50,214 p=6652 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo los grupos par los roles] *********************************************************
+2024-12-03 00:39:50,542 p=6652 u=vagrant n=ansible | changed: [localhost] => (item=G_R1)
+2024-12-03 00:39:50,689 p=6652 u=vagrant n=ansible | changed: [localhost] => (item=Grupo_Barboza)
+2024-12-03 00:39:50,694 p=6652 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo usuarios] *************************************************************************
+2024-12-03 00:39:51,092 p=6652 u=vagrant n=ansible | changed: [localhost] => (item={'nombre': 'usuario1', 'grupos': 'G_R1,Grupo_Barboza'})
+2024-12-03 00:39:51,103 p=6652 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-03 00:39:51,104 p=6652 u=vagrant n=ansible | localhost                  : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-03 00:42:14,267 p=6932 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-03 00:42:14,288 p=6932 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-03 00:42:15,166 p=6932 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 00:42:15,177 p=6932 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-03 00:42:15,200 p=6932 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-03 00:42:15,660 p=6932 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 00:42:15,666 p=6932 u=vagrant n=ansible | TASK [Alta usuarios] *************************************************************************************************
+2024-12-03 00:42:15,692 p=6932 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo los grupos par los roles] *********************************************************
+2024-12-03 00:42:15,931 p=6932 u=vagrant n=ansible | ok: [localhost] => (item=G_R1)
+2024-12-03 00:42:16,064 p=6932 u=vagrant n=ansible | ok: [localhost] => (item=Grupo_Barboza)
+2024-12-03 00:42:16,070 p=6932 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo usuarios con su grupo correspondiente, y su password] *****************************
+2024-12-03 00:42:16,359 p=6932 u=vagrant n=ansible | changed: [localhost] => (item={'nombre': 'DylanBarbozaUser_1', 'grupos': 'G_R1,Grupo_Barboza'})
+2024-12-03 00:42:16,371 p=6932 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-03 00:42:16,371 p=6932 u=vagrant n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-03 02:00:02,436 p=7633 u=vagrant n=ansible | - Role Sudoers_Barboza was created successfully
+2024-12-03 02:00:21,211 p=7653 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-03 02:00:21,232 p=7653 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-03 02:00:22,305 p=7653 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 02:00:22,316 p=7653 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-03 02:00:22,342 p=7653 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-03 02:00:22,944 p=7653 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 02:00:22,950 p=7653 u=vagrant n=ansible | TASK [Alta usuarios] *************************************************************************************************
+2024-12-03 02:00:22,975 p=7653 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo los grupos par los roles] *********************************************************
+2024-12-03 02:00:23,214 p=7653 u=vagrant n=ansible | ok: [localhost] => (item=G_R1)
+2024-12-03 02:00:23,348 p=7653 u=vagrant n=ansible | ok: [localhost] => (item=Grupo_Barboza)
+2024-12-03 02:00:23,353 p=7653 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo usuarios con su grupo correspondiente, y su password] *****************************
+2024-12-03 02:00:23,647 p=7653 u=vagrant n=ansible | changed: [localhost] => (item={'nombre': 'DylanBarbozaUser_1', 'grupos': 'G_R1,Grupo_Barboza'})
+2024-12-03 02:00:23,654 p=7653 u=vagrant n=ansible | TASK [Sudoers] *******************************************************************************************************
+2024-12-03 02:00:23,678 p=7653 u=vagrant n=ansible | TASK [Sudoers_Barboza : Configurar sudo sin contraseña para el grupo] ************************************************
+2024-12-03 02:00:23,701 p=7653 u=vagrant n=ansible | fatal: [localhost]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'nombre_grupo' is undefined\n\nThe error appears to be in '/home/vagrant/repogit/UTN-FRA_SO_TP-Integral/ansible/roles/Sudoers_Barboza/tasks/main.yml': line 4, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Configurar sudo sin contraseña para el grupo\n  ^ here\n"}
+2024-12-03 02:00:23,702 p=7653 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-03 02:00:23,702 p=7653 u=vagrant n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-12-03 02:02:31,910 p=7974 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-03 02:02:31,932 p=7974 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-03 02:02:32,891 p=7974 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 02:02:32,902 p=7974 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-03 02:02:32,925 p=7974 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-03 02:02:33,379 p=7974 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 02:02:33,385 p=7974 u=vagrant n=ansible | TASK [Alta usuarios] *************************************************************************************************
+2024-12-03 02:02:33,410 p=7974 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo los grupos par los roles] *********************************************************
+2024-12-03 02:02:33,662 p=7974 u=vagrant n=ansible | ok: [localhost] => (item=G_R1)
+2024-12-03 02:02:33,786 p=7974 u=vagrant n=ansible | ok: [localhost] => (item=Grupo_Barboza)
+2024-12-03 02:02:33,792 p=7974 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo usuarios con su grupo correspondiente, y su password] *****************************
+2024-12-03 02:02:34,077 p=7974 u=vagrant n=ansible | changed: [localhost] => (item={'nombre': 'DylanBarbozaUser_1', 'grupos': 'G_R1,Grupo_Barboza'})
+2024-12-03 02:02:34,085 p=7974 u=vagrant n=ansible | TASK [Sudoers] *******************************************************************************************************
+2024-12-03 02:02:34,109 p=7974 u=vagrant n=ansible | TASK [Sudoers_Barboza : Configurar sudo sin contraseña para el grupo] ************************************************
+2024-12-03 02:02:34,366 p=7974 u=vagrant n=ansible | changed: [localhost]
+2024-12-03 02:02:34,377 p=7974 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-03 02:02:34,377 p=7974 u=vagrant n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-03 02:12:54,779 p=8320 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-03 02:12:54,800 p=8320 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-03 02:12:55,695 p=8320 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 02:12:55,707 p=8320 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-03 02:12:55,729 p=8320 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-03 02:12:56,190 p=8320 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 02:12:56,196 p=8320 u=vagrant n=ansible | TASK [Alta usuarios] *************************************************************************************************
+2024-12-03 02:12:56,223 p=8320 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo los grupos par los roles] *********************************************************
+2024-12-03 02:12:56,470 p=8320 u=vagrant n=ansible | ok: [localhost] => (item=G_R1)
+2024-12-03 02:12:56,605 p=8320 u=vagrant n=ansible | ok: [localhost] => (item=Grupo_Barboza)
+2024-12-03 02:12:56,611 p=8320 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo usuarios con su grupo correspondiente, y su password] *****************************
+2024-12-03 02:12:56,902 p=8320 u=vagrant n=ansible | changed: [localhost] => (item={'nombre': 'DylanBarbozaUser_1', 'grupos': 'G_R1,Grupo_Barboza'})
+2024-12-03 02:12:56,908 p=8320 u=vagrant n=ansible | TASK [Sudoers] *******************************************************************************************************
+2024-12-03 02:12:56,932 p=8320 u=vagrant n=ansible | TASK [Sudoers_Barboza : Configurar sudo sin contraseña para el grupo] ************************************************
+2024-12-03 02:12:57,155 p=8320 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 02:12:57,161 p=8320 u=vagrant n=ansible | TASK [Instala tools] *************************************************************************************************
+2024-12-03 02:12:57,204 p=8320 u=vagrant n=ansible | TASK [Instala-tools_Barboza : Instalar los programas] ****************************************************************
+2024-12-03 02:12:58,332 p=8320 u=vagrant n=ansible | ok: [localhost] => (item=tree)
+2024-12-03 02:12:59,131 p=8320 u=vagrant n=ansible | ok: [localhost] => (item=htop)
+2024-12-03 02:12:59,947 p=8320 u=vagrant n=ansible | ok: [localhost] => (item=tmux)
+2024-12-03 02:13:09,353 p=8320 u=vagrant n=ansible | changed: [localhost] => (item=speedtest-cli)
+2024-12-03 02:13:09,365 p=8320 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-03 02:13:09,365 p=8320 u=vagrant n=ansible | localhost                  : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-03 03:12:03,914 p=8931 u=vagrant n=ansible | PLAY [Ejecutar el rol TP_INI y otra tarea] ***************************************************************************
+2024-12-03 03:12:03,942 p=8931 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2024-12-03 03:12:05,213 p=8931 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 03:12:05,229 p=8931 u=vagrant n=ansible | TASK [Incluir el rol TP_INI] *****************************************************************************************
+2024-12-03 03:12:05,258 p=8931 u=vagrant n=ansible | TASK [TP_INI : Creo el txt con el contenido] *************************************************************************
+2024-12-03 03:12:05,870 p=8931 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 03:12:05,906 p=8931 u=vagrant n=ansible | TASK [Alta usuarios] *************************************************************************************************
+2024-12-03 03:12:05,940 p=8931 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo los grupos par los roles] *********************************************************
+2024-12-03 03:12:06,229 p=8931 u=vagrant n=ansible | ok: [localhost] => (item=G_R1)
+2024-12-03 03:12:06,397 p=8931 u=vagrant n=ansible | ok: [localhost] => (item=Grupo_Barboza)
+2024-12-03 03:12:06,404 p=8931 u=vagrant n=ansible | TASK [Alta_Usuarios_Barboza : creo usuarios con su grupo correspondiente, y su password] *****************************
+2024-12-03 03:12:06,837 p=8931 u=vagrant n=ansible | changed: [localhost] => (item={'nombre': 'DylanBarbozaUser_1', 'grupos': 'G_R1,Grupo_Barboza'})
+2024-12-03 03:12:06,847 p=8931 u=vagrant n=ansible | TASK [Sudoers] *******************************************************************************************************
+2024-12-03 03:12:06,876 p=8931 u=vagrant n=ansible | TASK [Sudoers_Barboza : Configurar sudo sin contraseña para el grupo] ************************************************
+2024-12-03 03:12:07,153 p=8931 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 03:12:07,161 p=8931 u=vagrant n=ansible | TASK [Instala tools] *************************************************************************************************
+2024-12-03 03:12:07,192 p=8931 u=vagrant n=ansible | TASK [Instala-tools_Barboza : Instalar los programas] ****************************************************************
+2024-12-03 03:12:08,441 p=8931 u=vagrant n=ansible | ok: [localhost] => (item=tree)
+2024-12-03 03:12:09,488 p=8931 u=vagrant n=ansible | ok: [localhost] => (item=htop)
+2024-12-03 03:12:10,586 p=8931 u=vagrant n=ansible | ok: [localhost] => (item=tmux)
+2024-12-03 03:12:11,821 p=8931 u=vagrant n=ansible | ok: [localhost] => (item=speedtest-cli)
+2024-12-03 03:12:11,836 p=8931 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************
+2024-12-03 03:12:11,836 p=8931 u=vagrant n=ansible | localhost                  : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

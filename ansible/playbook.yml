@@ -1,18 +1,30 @@
 ---
-- hosts: 
-#  - all
-  - testing
-  - produccion
+- name: Ejecutar el rol TP_INI y otra tarea
+  hosts:
+    - testing
+    - produccion
 
-  # Variables Globales
+  become: yes  #Super Previlegios
+  
   vars_files:
-    - vars/main.yml
+    - vars/main.yml  # Carga las variables definidas en vars/main.yml
 
   tasks:
-    - include_role:
+    - name: Incluir el rol TP_INI
+      include_role:
         name: TP_INI
-    
-    - name: "Otra tarea"
-      debug:
-        msg: "Despues de la ejecucion del rol"
+
+    - name: Alta usuarios
+      include_role:
+        name: Alta_Usuarios_Barboza
+
+    - name: Sudoers
+      include_role:
+        name: Sudoers_Barboza
+
+    - name: Instala tools
+      include_role:
+        name: Instala-tools_Barboza
+
+
 

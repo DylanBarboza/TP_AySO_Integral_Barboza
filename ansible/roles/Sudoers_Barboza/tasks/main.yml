@@ -1,0 +1,17 @@
+---
+# tasks file for Sudoers_Barboza
+
+- name: Configurar sudo sin contraseña para el grupo
+  lineinfile: #aca se asegura q la linea especifica este, o remplazar una linea exitente
+    path: /etc/sudoers #el path donde se dirige
+    state: present #si ya existe no se modificara, si no existe se agrega esto
+    regexp: '^%{{ nombre_grupo }}' #busca linea que ya este presente, con nombre del grupo
+    line: '%{{ nombre_grupo }} ALL=(ALL) NOPASSWD: ALL' #sino encuentra la linea rage xp, se añadira esto
+    validate: 'visudo -cf %s' #NOPASSWD:ALL los miembros del grupo pueden ejecutar todos los comandos con sudo
+                              #ALL : los miembros edl grupo pueden ejecutar comandos como cualquier usuarios, incluyendo root                       
+                              #Validate // verificar /etc/sudoers de sintaxis si es incorrecta, el archivo no se modificiara, evitando que el estado de configuracion incorrecta podria impedir el uso del sudo.
+
+
+
+
+

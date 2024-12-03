@@ -1,8 +1,23 @@
----
 # tasks file for TP_INI
-
- - name: "Rol: TP_INI - Grupo: {{ Nombre_Grupo }}"
-   debug:
-     msg: "Inicio de tareas dentro del Rol: TP_INI"
+- name: Creo el txt con el contenido
+  copy:
+    dest: /tmp/Grupo/datos.txt #Hacia donde quiero crear el txt
+    content: |
+      Nombre Grupo: {{ nombre_grupo }}
+      División: {{ division }}                #Aca llamo a las variables que luego las voy a
+      Fecha: {{ ansible_date_time.date }}     #Modificar en el playbook
+      ------------------------
+      Distribución: {{ ansible_facts['distribution'] }} #aca utilizo ansible_facts para recolectar
+      Cantidad de Cores: {{ ansible_facts['processor_cores'] }} #unicamente lo que esta en corchetes
+      ------------------------
+      R1: Nombre: {{ mi_nombre }} Apellido: {{ mi_apellido }}
+      R2: Nombre: {{ mi_nombre }} Apellido: {{ mi_apellido }}
+      R3: Nombre: {{ mi_nombre }} Apellido: {{ mi_apellido }}
+      R4: Nombre: {{ mi_nombre }} Apellido: {{ mi_apellido }}
+      R5: Nombre: {{ mi_nombre }} Apellido: {{ mi_apellido }}
+      R6: Nombre: {{ mi_nombre }} Apellido: {{ mi_apellido }}
+    owner: vagrant
+    group: vagrant
+    mode: '0644'
 
 

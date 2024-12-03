@@ -1,0 +1,30 @@
+---
+# Crear los grupos necesarios
+- name: creo los grupos par los roles
+  group:
+    name: "{{ item }}"
+    state: present
+  loop: #ACA UTILIZO Loop para evitar crear cada grupo 1 por 1, los asigno asi
+    - G_R1 #Me quedo con el G_R1
+#   - G_R2
+#   - G_R3        #aca tambien unicamente creo un solo grupo
+#   - G_R4
+#   - G_R5
+#   - G_R6 
+    - "{{ nombre_grupo }}"
+
+#creo usuarios para asignarlos al grupo
+- name: creo usuarios con su grupo correspondiente, y su password
+  user:
+    name: "{{ item.nombre }}"
+    groups: "{{ item.grupos }}"
+    password: "{{ 'vagrant' | password_hash('sha512') }}"
+  with_items:
+    - { nombre: "DylanBarbozaUser_1", grupos: "G_R1,{{ nombre_grupo  }}" } #Como soy el unico integrante me asigno uno
+#   - { nombre: "DylanBarbozaUser_2", grupos: "G_R2,{{ nombre_grupo  }}" } 
+#   - { nombre: "DylanBarbozaUser_3", grupos: "G_R3,{{ nombre_grupo  }}" }
+#   - { nombre: "DylanBarbozaUser_4", grupos: "G_R4,{{ nombre_grupo  }}" }
+#   - { nombre: "DylanBarbozaUser_5", grupos: "G_R5,{{ nombre_grupo  }}" }
+#   - { nombre: "DylanBarbozaUser_6", grupos: "G_R6,{{ nombre_grupo  }}" }
+
+
